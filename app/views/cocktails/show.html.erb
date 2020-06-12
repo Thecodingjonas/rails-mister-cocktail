@@ -1,10 +1,10 @@
-<h1 class="title"> SHOOOOW ME WHAT YOU DRINK </h1>
+<h1 class="white"> SHOOOOW ME WHAT YOU DRINK </h1>
 
 <div class="container text-center">
-  <%= @cocktail.name %>
+  <h2 class="white"><%= @cocktail.name %></h2>
   <% @cocktail.doses.each do |dose|%>
-  <%= dose.description %>
-  <%= dose.ingredient.name %>
+  <h5 class="white"><%= dose.description %></h5>
+  <h5 class="white"><%= dose.ingredient.name %></h5>
   <% end %>
 
 </div>
@@ -15,6 +15,6 @@
 <% else %>
   <%= image_tag "https://source.unsplash.com/500x400/?cocktail", alt: "cocktail_pic" %>
 <% end %>
-<p><%= link_to 'BACK',  cocktails_path %></p>
+<p class="white"><%= link_to 'BACK',  cocktails_path %></p>
 
 <p><%= render "doses/new", cocktail: @cocktail, dose: @dose %></p>

@@ -1,17 +1,14 @@
-<h1 class="title"> YOU WANT TO SEE SOME COCKTAILS: </h1>
+<h1 class="white"> YOU WANT TO SEE SOME COCKTAILS: </h1>
 <p><%= link_to 'CREATE NEW COCKTAIL' ,  new_cocktail_path %></p>
 
 <% @cocktails.each do |c| %>
-<h4><%= c.name %></h4>
-<% c.doses.each do |d| %> Needed :
-<%= d.ingredient.name %>
+<h4 class="white"><%= c.name %></h4>
+<% c.doses.each do |d| %> <p class="white">Needed :</p>
+<h6 class="white"><%= d.ingredient.name %></h6>
 <% end %>
 <p><%= link_to 'VIEW DETAILS', cocktail_path(c) %></p>
 <% end %>
 <%= cl_image_tag("glass-mojito_pfp4px",
       width: 400, height: 300, crop: :fill) %>
-<% @doses.each do |dose| %>
-<%= dose.ingredient.name %>
-<% end %>
 
 
