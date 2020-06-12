@@ -15,5 +15,13 @@
 
 .title {
   background-color: #46B1C9;
-  color: white;
+  color: rgba(220,220,220,0.8);
+}
+
+.white {
+  color: rgba(220,220,220,0.8)
+}
+
+body {
+  background-image: radial-gradient( circle farthest-corner at 97.4% 91.4%,  rgba(204,0,107,1) 0%, rgba(0,0,0,1) 82.4% );
 }

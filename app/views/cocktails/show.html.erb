@@ -6,7 +6,15 @@
   <%= dose.description %>
   <%= dose.ingredient.name %>
   <% end %>
+
 </div>
 
+<% if @cocktail.photo.attached? %>
+  <%= cl_image_tag(@cocktail.photo.key,
+        width: 400, height: 300, crop: :fill) %>
+<% else %>
+  <%= image_tag "https://source.unsplash.com/500x400/?cocktail", alt: "cocktail_pic" %>
+<% end %>
+<p><%= link_to 'BACK',  cocktails_path %></p>
 
 <p><%= render "doses/new", cocktail: @cocktail, dose: @dose %></p>

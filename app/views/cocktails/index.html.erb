@@ -3,8 +3,13 @@
 
 <% @cocktails.each do |c| %>
 <h4><%= c.name %></h4>
+<% c.doses.each do |d| %> Needed :
+<%= d.ingredient.name %>
+<% end %>
 <p><%= link_to 'VIEW DETAILS', cocktail_path(c) %></p>
 <% end %>
+<%= cl_image_tag("glass-mojito_pfp4px",
+      width: 400, height: 300, crop: :fill) %>
 <% @doses.each do |dose| %>
 <%= dose.ingredient.name %>
 <% end %>
