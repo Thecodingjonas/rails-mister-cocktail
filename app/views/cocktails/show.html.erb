@@ -1,0 +1,12 @@
+<h1 class="title"> SHOOOOW ME WHAT YOU DRINK </h1>
+
+<div class="container text-center">
+  <%= @cocktail.name %>
+  <% @cocktail.doses.each do |dose|%>
+  <%= dose.description %>
+  <%= dose.ingredient.name %>
+  <% end %>
+</div>
+
+
+<p><%= render "doses/new", cocktail: @cocktail, dose: @dose %></p>

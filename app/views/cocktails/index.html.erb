@@ -1,0 +1,12 @@
+<h1 class="title"> YOU WANT TO SEE SOME COCKTAILS: </h1>
+<p><%= link_to 'CREATE NEW COCKTAIL' ,  new_cocktail_path %></p>
+
+<% @cocktails.each do |c| %>
+<h4><%= c.name %></h4>
+<p><%= link_to 'VIEW DETAILS', cocktail_path(c) %></p>
+<% end %>
+<% @doses.each do |dose| %>
+<%= dose.ingredient.name %>
+<% end %>
+
+
